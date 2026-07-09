@@ -2,6 +2,8 @@
 
 This is the source-gathering list for making sentinelitad.com a stronger trust signal and lead generator.
 
+For the current gathered facts, safe/unsafe copy rules, audience map, and source map, see `docs/trust-lead-content-inventory.md`.
+
 ## Identity
 
 - [ ] Final business name display: Sentinel IT Asset Disposal / Sentinel ITAD / Sentinel IT Asset Logistics.

@@ -16,6 +16,15 @@ Operational docs, contacts, valuation scripts, and private lead research remain 
 - `mbgulden/sentinel-it-asset-logistics`
 - local path: `/home/ubuntu/work/sentinel-it-asset-logistics`
 
+## Website planning docs
+
+- `docs/website-brief.md` — positioning, audiences, SEO terms, compliance caveat.
+- `docs/content-checklist.md` — collection checklist for identity, proof, lead-gen, and SEO assets.
+- `docs/trust-lead-content-inventory.md` — current gathered facts, safe/unsafe copy, audience map, trust-signal gaps, and source map.
+- `docs/intake-questions.md` — lead intake questions for pickup/bin/decommissioning requests.
+- `docs/deployment-dns.md` — deployment and DNS notes.
+- `docs/launch-backlog.md` — public-launch backlog.
+
 ## Current implementation
 
 Static HTML/CSS in `public/`:
