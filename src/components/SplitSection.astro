@@ -1,0 +1,9 @@
+---
+interface ListBlock { eyebrow: string; title: string; body?: string; items?: string[]; tone?: "good" | "caution" }
+interface Props { left: ListBlock; right: ListBlock }
+const { left, right } = Astro.props;
+const listClass = (tone?: string) => tone === "caution" ? "x-list" : "check-list";
+---
+<section class="section split" data-emdash-block="split-section">
+  {[left, right].map((block) => <div><p class={`eyebrow ${block.tone === "caution" ? "muted" : ""}`}>{block.eyebrow}</p><h2>{block.title}</h2>{block.body && <p>{block.body}</p>}{block.items && <ul class={listClass(block.tone)}>{block.items.map((item) => <li>{item}</li>)}</ul>}</div>)}
+</section>

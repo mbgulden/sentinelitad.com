@@ -1,0 +1,96 @@
+{
+  "title": "Sentinel ITAD | Secure IT Asset Disposal and Logistics in Meridian & Boise",
+  "description": "Sentinel ITAD helps Treasure Valley businesses clear retired servers, workstations, networking gear, and data-bearing media with secure local pickup, chain-of-custody intake, value recovery, and responsible downstream recycling.",
+  "slug": "/",
+  "navLabel": "Home",
+  "hero": {
+    "eyebrow": "Meridian, Idaho \u00b7 Serving the Treasure Valley",
+    "title": "Secure IT asset disposal and logistics for teams that cannot afford loose ends.",
+    "body": "Sentinel helps MSPs, offices, and compliance-conscious businesses clear retired servers, workstations, networking gear, and storage media with local pickup, documented intake, value recovery, and responsible downstream recycling.",
+    "image": "/assets/sentinel_hero.jpg",
+    "imageAlt": "Secure IT asset recovery console beside enterprise server equipment",
+    "ctas": [
+      {
+        "label": "Start a pickup request",
+        "href": "/#contact",
+        "variant": "primary"
+      },
+      {
+        "label": "Call / text 808-498-1125",
+        "href": "tel:+180****1125",
+        "variant": "secondary"
+      }
+    ]
+  },
+  "warning": {
+    "strong": "No magic certificates.",
+    "body": "We document what actually happened: pickup, intake, serial/media handling, sanitization or downstream routing, and exceptions. Trust signals beat theater."
+  },
+  "cards": [
+    {
+      "title": "IT asset pickup",
+      "body": "Local removal for retired servers, workstations, desktops, networking gear, storage arrays, cables, rails, and related business hardware."
+    },
+    {
+      "title": "MSP feeder bins",
+      "body": "For recurring MSP clutter: a controlled collection point for client refresh leftovers, with scheduled pickup when the bin fills.",
+      "href": "/msp-feeder-bin.html"
+    },
+    {
+      "title": "Data-bearing media handling",
+      "body": "Drives and removable storage are separated, logged where required, and routed for wipe, destruction, return, or downstream partner processing."
+    },
+    {
+      "title": "Value recovery",
+      "body": "Servers, RAM, CPUs, NICs, SSDs, monitors, and workstations are tested for reuse or resale when practical instead of being blindly scrapped."
+    }
+  ],
+  "trustItems": [
+    {
+      "title": "Local accountability",
+      "body": "Based in Meridian, operated by Growth Web Development LLC DBA Sentinel IT Asset Disposal and Logistics."
+    },
+    {
+      "title": "Documented custody",
+      "body": "Pickup records, ticket IDs, serial/media notes, and disposition records where the job requires them."
+    },
+    {
+      "title": "Honest compliance posture",
+      "body": "Insured; certificates and additional insured documentation are available for approved jobs. No unsupported claims of R2v3/NAID certification."
+    },
+    {
+      "title": "Security-first language",
+      "body": "The core offer is liability reduction and responsible disposition, not junk hauling."
+    }
+  ],
+  "steps": [
+    {
+      "title": "Scope",
+      "body": "You tell us what you have: counts, asset classes, media sensitivity, stairs/loading constraints, and timing."
+    },
+    {
+      "title": "Pickup",
+      "body": "We schedule local pickup or bin placement and record the custody handoff for sensitive jobs."
+    },
+    {
+      "title": "Intake",
+      "body": "Assets are sorted into reuse, resale, part-out, internal-use, data-media, and downstream recycling paths."
+    },
+    {
+      "title": "Disposition",
+      "body": "You receive the appropriate record: pickup receipt, asset/media log, sanitization/destruction evidence, or downstream partner documentation."
+    }
+  ],
+  "primaryCta": {
+    "eyebrow": "Lead capture",
+    "title": "Tell us what needs to disappear responsibly.",
+    "body": "Include rough counts, whether storage media is involved, and your pickup location.",
+    "ctas": [
+      {
+        "label": "Email team@sentinelitad.com",
+        "href": "mailto:team@sentinelitad.com",
+        "variant": "primary"
+      }
+    ]
+  }
+}

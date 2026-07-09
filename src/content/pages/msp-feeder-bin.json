@@ -1,0 +1,21 @@
+{
+  "title": "MSP Feeder Bins | Sentinel ITAD Treasure Valley",
+  "description": "Recurring MSP e-waste and retired IT hardware pickup in Meridian, Boise, Nampa, Eagle, and the Treasure Valley.",
+  "slug": "/msp-feeder-bin.html",
+  "navLabel": "MSP Feeder Bins",
+  "hero": {
+    "eyebrow": "Editable in EmDash",
+    "title": "MSP Feeder Bins",
+    "body": "Recurring MSP e-waste and retired IT hardware pickup in Meridian, Boise, Nampa, Eagle, and the Treasure Valley.",
+    "ctas": [
+      {
+        "label": "Contact Sentinel",
+        "href": "/#contact",
+        "variant": "primary"
+      }
+    ]
+  },
+  "cards": [],
+  "trustItems": [],
+  "steps": []
+}

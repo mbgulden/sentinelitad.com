@@ -1,0 +1,21 @@
+{
+  "title": "How Pickup Works | Sentinel ITAD",
+  "description": "How Sentinel ITAD documents pickup, intake, data-bearing media handling, disposition, and downstream routing for retired business technology.",
+  "slug": "/how-pickup-works.html",
+  "navLabel": "How Pickup Works",
+  "hero": {
+    "eyebrow": "Editable in EmDash",
+    "title": "How Pickup Works",
+    "body": "How Sentinel ITAD documents pickup, intake, data-bearing media handling, disposition, and downstream routing for retired business technology.",
+    "ctas": [
+      {
+        "label": "Contact Sentinel",
+        "href": "/#contact",
+        "variant": "primary"
+      }
+    ]
+  },
+  "cards": [],
+  "trustItems": [],
+  "steps": []
+}

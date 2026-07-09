@@ -1,0 +1,9 @@
+---
+interface Step { title: string; body: string }
+interface Props { eyebrow: string; title: string; steps: Step[]; id?: string }
+const { eyebrow, title, steps, id } = Astro.props;
+---
+<section id={id} class="section" data-emdash-block="process-timeline">
+  <div class="section-head"><p class="eyebrow">{eyebrow}</p><h2>{title}</h2></div>
+  <ol class="timeline">{steps.map((step) => <li><strong>{step.title}</strong><p>{step.body}</p></li>)}</ol>
+</section>

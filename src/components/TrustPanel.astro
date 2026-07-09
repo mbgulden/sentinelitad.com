@@ -1,0 +1,14 @@
+---
+interface Item { title: string; body: string }
+interface Props { eyebrow: string; title: string; items: Item[]; id?: string }
+const { eyebrow, title, items, id } = Astro.props;
+---
+<section id={id} class="section dark" data-emdash-block="trust-panel">
+  <div class="section-head">
+    <p class="eyebrow">{eyebrow}</p>
+    <h2>{title}</h2>
+  </div>
+  <div class="proof-list">
+    {items.map((item, i) => <div><span>{String(i + 1).padStart(2, "0")}</span><strong>{item.title}</strong><p>{item.body}</p></div>)}
+  </div>
+</section>

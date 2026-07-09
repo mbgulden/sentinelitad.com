@@ -1,0 +1,15 @@
+---
+interface Card { title: string; body: string; href?: string }
+interface Props { eyebrow: string; title: string; body?: string; cards: Card[]; id?: string }
+const { eyebrow, title, body, cards, id } = Astro.props;
+---
+<section id={id} class="section" data-emdash-block="card-grid">
+  <div class="section-head">
+    <p class="eyebrow">{eyebrow}</p>
+    <h2>{title}</h2>
+    {body && <p>{body}</p>}
+  </div>
+  <div class="grid cards">
+    {cards.map((card) => <article class="card"><h3>{card.title}</h3><p>{card.body} {card.href && <a href={card.href}>Learn more</a>}</p></article>)}
+  </div>
+</section>

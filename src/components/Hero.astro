@@ -1,0 +1,18 @@
+---
+interface CTA { label: string; href: string; variant?: "primary" | "secondary" }
+interface Props { eyebrow: string; title: string; body: string; image?: string; imageAlt?: string; ctas?: CTA[]; bullets?: string[]; caption?: string }
+const { eyebrow, title, body, image = "/assets/sentinel_hero.jpg", imageAlt = "Secure IT asset recovery console beside enterprise server equipment", ctas = [], bullets = [], caption = "Security-first pickup and disposition for retired business technology." } = Astro.props;
+---
+<section class="hero">
+  <div class="hero-copy" data-emdash-field="hero">
+    <p class="eyebrow">{eyebrow}</p>
+    <h1>{title}</h1>
+    <p class="lede">{body}</p>
+    {ctas.length > 0 && <div class="actions">{ctas.map((cta) => <a class={`button ${cta.variant ?? "primary"}`} href={cta.href}>{cta.label}</a>)}</div>}
+    {bullets.length > 0 && <ul class="hero-bullets" aria-label="Key trust points">{bullets.map((item) => <li>{item}</li>)}</ul>}
+  </div>
+  <figure class="hero-card">
+    <img src={image} alt={imageAlt} />
+    <figcaption>{caption}</figcaption>
+  </figure>
+</section>

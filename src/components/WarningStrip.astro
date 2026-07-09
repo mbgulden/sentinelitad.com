@@ -1,0 +1,7 @@
+---
+interface Props { strong: string; body: string }
+const { strong, body } = Astro.props;
+---
+<section class="warning-strip" aria-label="Compliance-safe promise" data-emdash-field="warning">
+  <strong>{strong}</strong> {body}
+</section>

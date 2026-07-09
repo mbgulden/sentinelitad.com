@@ -1,0 +1,20 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "./Hero.astro";
+import WarningStrip from "./WarningStrip.astro";
+import CardGrid from "./CardGrid.astro";
+import TrustPanel from "./TrustPanel.astro";
+import ProcessTimeline from "./ProcessTimeline.astro";
+import LeadCapture from "./LeadCapture.astro";
+
+interface Props { page: any }
+const { page } = Astro.props;
+---
+<BaseLayout title={page.title} description={page.description} canonical={page.slug}>
+  <Hero {...page.hero} bullets={page.hero.bullets ?? []} />
+  {page.warning && <WarningStrip {...page.warning} />}
+  {page.cards?.length > 0 && <CardGrid id="services" eyebrow="What we handle" title="Standard Sentinel modules" body="Reusable content blocks keep the site consistent." cards={page.cards} />}
+  {page.trustItems?.length > 0 && <TrustPanel id="proof" eyebrow="Trust signals" title="Evidence over theater." items={page.trustItems} />}
+  {page.steps?.length > 0 && <ProcessTimeline id="process" eyebrow="Operating flow" title="From request to disposition." steps={page.steps} />}
+  {page.primaryCta && <LeadCapture {...page.primaryCta} />}
+</BaseLayout>
