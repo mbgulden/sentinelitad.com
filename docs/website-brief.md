@@ -1,9 +1,9 @@
 # Sentinel ITAD Website Brief
 
-**Project:** sentinelitad.com public lead-generation site  
-**Business:** Growth Web Development LLC DBA Sentinel IT Asset Disposal  
-**Base:** Meridian, Idaho / Treasure Valley  
-**Primary contact for now:** Michael@growthwebdev.com · 808-498-1125
+**Project:** sentinelitad.com public lead-generation site
+**Business:** Growth Web Development LLC DBA Sentinel IT Asset Disposal and Logistics
+**Base:** Meridian, Idaho / Treasure Valley
+**Primary contact:** team@sentinelitad.com · 808-498-1125
 
 ## Website job
 
@@ -30,11 +30,11 @@ Tone: small, exclusive, security-first, sober, direct. Not cute. Not “we love 
 
 ## Trust signals to collect before launch/polish
 
-- Final business display name: Sentinel IT Asset Disposal vs Sentinel ITAD vs Sentinel IT Asset Logistics.
-- Sentinel-domain email: `michael@sentinelitad.com`, `pickup@sentinelitad.com`, or `secure@sentinelitad.com`.
+- Final business display name: Sentinel IT Asset Disposal and Logistics.
+- Sentinel-domain email: `team@sentinelitad.com`.
 - Logo / mark / brand color decision.
 - Business address policy: public city-only vs mailing address vs registered office.
-- Insurance status and exact wording allowed.
+- Insurance status confirmed: insured; certificates and additional insured documents available. Still need exact policy-type/limit wording before public specifics.
 - Data-sanitization tooling decision and sample wipe log/certificate.
 - Downstream partner certificate/evidence and approved public wording.
 - Photos: Michael, vehicle/trailer/bin, hardware intake area, example gear, labeled media bins.

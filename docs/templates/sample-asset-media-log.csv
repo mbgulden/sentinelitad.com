@@ -1,0 +1,4 @@
+job_id,asset_id,client_asset_tag,asset_type,manufacturer,model,serial_or_wwn,media_present,media_type,capacity,condition,intake_timestamp,custody_status,planned_disposition,sanitization_method,verification_result,downstream_partner,certificate_id,exception_notes
+SIAL-20260709-SAMPLE,SIAL-A-0001,CLIENT-TAG-001,Server,HP,DL380 Gen10,SAMPLE-SERVER-SN-001,yes,SATA SSD,960GB,working,2026-07-09T10:00:00-06:00,intake logged,reuse/resale after media handling,TBD,TBD,,TBD,SAMPLE DATA ONLY
+SIAL-20260709-SAMPLE,SIAL-M-0001,,Drive,Samsung,PM883,SAMPLE-SSD-SN-001,yes,SATA SSD,960GB,working,2026-07-09T10:05:00-06:00,segregated media,wipe then reuse,NIST 800-88 Purge candidate,TBD,,TBD,SAMPLE DATA ONLY - not proof of wipe
+SIAL-20260709-SAMPLE,SIAL-M-0002,,Drive,Seagate,Constellation ES,SAMPLE-HDD-SN-002,yes,SATA HDD,2TB,failed,2026-07-09T10:06:00-06:00,segregated media,physical destruction,Destroy,TBD,Certified recycler TBD,TBD,SAMPLE DATA ONLY - failed media path

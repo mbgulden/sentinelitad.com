@@ -2,26 +2,28 @@
 
 **Purpose:** working inventory for turning `sentinelitad.com` into a stronger trust signal and lead generator without exposing private operational material or making unsupported compliance claims.
 
-**Last source pass:** 2026-07-09  
-**Public website repo:** `mbgulden/sentinelitad.com`  
+**Last source pass:** 2026-07-09; Michael update incorporated 2026-07-09
+**Public website repo:** `mbgulden/sentinelitad.com`
 **Private/canonical operations repo:** `mbgulden/sentinel-it-asset-logistics`
 
 ## Current known public facts
 
 | Area | Known fact | Website use |
 |---|---|---|
-| Legal/business owner | Growth Web Development LLC DBA Sentinel IT Asset Disposal | Footer, privacy/terms, structured data |
+| Legal/business owner | Growth Web Development LLC DBA Sentinel IT Asset Disposal and Logistics | Footer, privacy/terms, structured data |
 | Brand shorthand | Sentinel ITAD | Header, SEO title, local landing copy |
+| Public display name | Sentinel IT Asset Disposal and Logistics | Footer, terms, trust pages, printed receipts/certificates |
 | Base | Meridian, Idaho; service focus Treasure Valley: Meridian, Boise, Nampa, Eagle | Local SEO, hero, schema `areaServed` |
 | Current public phone | 808-498-1125 | CTA/call button until a local Idaho number exists |
-| Current email | Michael@growthwebdev.com | Form destination and contact fallback until Sentinel-domain email exists |
+| Public email | team@sentinelitad.com | Form destination, contact fallback, printed collateral |
 | Domain | sentinelitad.com | `CNAME`, sitemap, canonical URLs |
 | Core positioning | Security-first local IT asset recovery between expensive national ITAD providers and low-trust junk haulers | Hero, proof section, sales language |
 | Brand voice | Small, exclusive, sober, compliance-aware; "Blue Collar Cyber" as internal positioning | Copy direction, not necessarily public tagline yet |
 | Capacity | Minivan + Tesla Model Y with 4x6 trailer; roughly 1 rack / 1,500 lb practical tow; garage-scale intake/storage | Internal scoping guidance; avoid overpromising bulk capacity |
 | Current resale route | Facebook Marketplace/direct; wants eBay/homelab channels | Future value-recovery page, not a launch blocker |
 | Wiping hardware | Hot-swap servers exist | Internal trust roadmap only |
-| Wiping/process gap | Wipe tooling, certificate automation, standardized serial logs, and insurance/compliance posture are not complete | Do **not** claim certified data destruction yet |
+| Insurance posture | Insured; certificates and additional insured documents can be provided when needed | Trust copy, procurement reassurance, pickup receipt notes |
+| Wiping/process gap | Wipe tooling, certificate automation, and standardized serial logs still need to be operationalized and tested | Do **not** claim certified data destruction yet |
 
 ## Public offer pillars to build around now
 
@@ -46,10 +48,10 @@
 | Need | Why it matters | Minimum artifact |
 |---|---|---|
 | Final public brand/name | Consistency across domain, schema, invoices, terms, forms | Chosen display name and DBA wording |
-| Sentinel-domain email | Looks less improvised than Growth Web email | `pickup@sentinelitad.com` or `secure@sentinelitad.com` forwarding/live mailbox |
+| Sentinel-domain email | Looks less improvised than Growth Web email | `team@sentinelitad.com` live mailbox/forwarder confirmed and monitored |
 | Logo/favicons/social card | Search/social trust and less stock-site feel | SVG mark, 512px PNG, favicon, OG image |
 | Local photos | Proves real local operation | Michael/operator photo, vehicle/trailer, bins, staged intake area, representative enterprise gear |
-| Insurance wording | Allows trust without legal overreach | Certificate on file + approved public sentence |
+| Insurance wording | Allows trust without legal overreach | Public wording: “Insured; certificates and additional insured documentation available for approved jobs.” |
 | Intake receipt template | Lets site show accountability | Fake/sample pickup receipt with non-client test data |
 | Asset/media log template | Demonstrates process | Sample CSV/PDF with fake serials |
 | Downstream partner evidence | Supports responsible recycling claims | Partner certs, accepted materials, public wording permission |
@@ -58,7 +60,7 @@
 
 ## Copy that is safe now
 
-- "Secure local IT asset recovery."
+- "Secure local IT asset disposal and logistics."
 - "Documented intake available for sensitive pickups."
 - "Data-bearing media is handled separately and routed according to the agreed disposition path."
 - "Reusable equipment is recovered before recycling where practical."
@@ -70,7 +72,7 @@
 - "R2v3 certified" / "NAID AAA certified" unless Sentinel itself holds it.
 - "Certified data destruction" until tooling, logs, verification, certificate template, and insurance posture are live.
 - "NIST 800-88 aligned" except for specific jobs actually performed under a tested process.
-- "Fully insured" until exact insurance coverage and wording are confirmed.
+- "Fully insured" or naming coverage amounts unless exact coverage and wording are confirmed for the public page.
 - "Zero landfill" unless downstream partner documentation supports it.
 - National-scale claims, guaranteed same-day bulk capacity, or data-center-scale language.
 
@@ -94,3 +96,23 @@
 4. Produce a one-page PDF/flyer for MSP walk-ins after logo/email are decided.
 5. Replace generated hero art with real local photos.
 6. Add downstream partner language only after certificates and permission to name/describe partners are confirmed.
+
+
+## Michael update — 2026-07-09
+
+Confirmed inputs:
+
+- Public name: **Sentinel IT Asset Disposal and Logistics**.
+- Public email: **team@sentinelitad.com**.
+- Deployment preference: **Cloudflare Pages** for `sentinelitad.com`.
+- Insurance: Sentinel is insured and can provide certificates and additional insured documents. Use that wording; do not publish policy numbers or coverage amounts in the repo.
+- Placeholders are acceptable until Michael points the site at real photos/assets.
+
+New artifacts requested and started in this repo:
+
+- Example logo: `public/assets/logo.svg`.
+- Printable pickup receipt: `docs/templates/printable-pickup-receipt.html`.
+- Sample asset/media log: `docs/templates/sample-asset-media-log.csv`.
+- Possible certified recycling partners: `docs/partners/certified-recycling-partners.md`.
+- Secure workflow with tooling: `docs/operations/secure-itad-workflow.md`.
+- Sample certificate/report and wipe/destruction stickers: `docs/templates/sample-certificate-of-disposition.html` and `docs/templates/wipe-destruction-stickers.svg`.

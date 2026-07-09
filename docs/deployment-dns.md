@@ -3,40 +3,58 @@
 ## Current state
 
 - GitHub repo: `mbgulden/sentinelitad.com`
-- Deployment: GitHub Pages workflow from branch `ned/initial-website`
-- Current preview URL: `https://mbgulden.github.io/sentinelitad.com/`
-- `public/CNAME` is present and contains `sentinelitad.com`.
-- GitHub Pages API currently reports `cname: null` because the domain does not resolve yet.
+- Current GitHub Pages preview/fallback: `https://mbgulden.github.io/sentinelitad.com/`
+- Preferred production host per Michael: **Cloudflare Pages**
+- Output directory: `public`
+- Build command: none
+- Production branch: `ned/initial-website` until a main/default production branch is created
+- Custom domain target: `sentinelitad.com`
+
+## Cloudflare Pages setup
+
+Create or connect a Cloudflare Pages project with:
+
+| Setting | Value |
+|---|---|
+| Project name | `sentinelitad-com` |
+| Repository | `mbgulden/sentinelitad.com` |
+| Production branch | `ned/initial-website` |
+| Framework preset | None / static |
+| Build command | empty / none |
+| Build output directory | `public` |
+| Custom domain | `sentinelitad.com` |
+| Optional `www` | `www.sentinelitad.com` redirecting to apex |
 
 ## DNS still needed
 
-`sentinelitad.com` currently fails DNS resolution. Do not expect the custom domain to work until DNS is pointed at the Pages host or a Cloudflare Pages project.
+`sentinelitad.com` currently fails DNS resolution from this VM. The custom domain will not work until the domain is in Cloudflare DNS or otherwise pointed at the Cloudflare Pages custom-domain target.
 
-### Option A — GitHub Pages apex domain
+If the zone is managed by Cloudflare, use the Pages custom domain flow and let Cloudflare create the required CNAME/flattened records. If the zone is outside Cloudflare, add the CNAME target Cloudflare Pages provides after the project/custom domain is created.
 
-Create these A records at the DNS provider:
+## GitHub Pages fallback
 
-| Type | Name | Value |
-|---|---|---|
-| A | `@` | `185.199.108.153` |
-| A | `@` | `185.199.109.153` |
-| A | `@` | `185.199.110.153` |
-| A | `@` | `185.199.111.153` |
-| CNAME | `www` | `mbgulden.github.io` |
+GitHub Pages remains useful as a preview URL while Cloudflare comes online:
 
-Then set the Pages custom domain to `sentinelitad.com` in GitHub repo settings and wait for the certificate to issue.
+- `https://mbgulden.github.io/sentinelitad.com/`
 
-### Option B — Cloudflare Pages
+The existing `public/CNAME` contains `sentinelitad.com`, but Cloudflare Pages does not require that file. It is harmless as a domain marker and can be removed later if Cloudflare-specific deployment complains.
 
-Create a Cloudflare Pages project from this repo using:
 
-- Build command: none
-- Output directory: `public`
-- Production branch: `ned/initial-website` unless a main branch is later created
-- Custom domain: `sentinelitad.com`
+## Cloudflare work performed — 2026-07-09
 
-Cloudflare will create the required DNS records automatically if the zone is on Cloudflare.
+- Created Cloudflare Pages project: `sentinelitad-com`.
+- First direct deployment URL: `https://f1c8095d.sentinelitad-com.pages.dev`.
+- Added Pages custom domains through the Cloudflare API:
+  - `sentinelitad.com`
+  - `www.sentinelitad.com`
+- Added proxied Cloudflare DNS CNAME records pointing both apex and `www` to `sentinelitad-com.pages.dev`. Cloudflare will flatten the apex record.
 
-## Do not change without approval
+Propagation/certificate state may lag creation. Verify with:
 
-DNS is live infrastructure. Update it only after Michael confirms which deployment host should own `sentinelitad.com`.
+```bash
+curl -I https://sentinelitad.com/
+curl -I https://www.sentinelitad.com/
+curl -I https://sentinelitad-com.pages.dev/
+```
+
+If Cloudflare Pages reports `CNAME record not set`, wait for DNS propagation and re-check the Pages domain status.

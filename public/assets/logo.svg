@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">Sentinel ITAD placeholder shield logo</title>
+  <desc id="desc">A teal and blue shield mark with a circuit-like S for Sentinel IT Asset Disposal and Logistics.</desc>
+  <defs>
+    <linearGradient id="g" x1="35" y1="20" x2="220" y2="238" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#38f2d0"/>
+      <stop offset="1" stop-color="#78a8ff"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#000" flood-opacity=".45"/>
+    </filter>
+  </defs>
+  <rect width="256" height="256" rx="48" fill="#07080a"/>
+  <path filter="url(#shadow)" d="M128 22 216 56v68c0 54-31 91-88 112-57-21-88-58-88-112V56l88-34Z" fill="#101319" stroke="url(#g)" stroke-width="10"/>
+  <path d="M82 91c0-22 18-38 46-38 22 0 39 9 50 25l-24 19c-7-10-16-15-28-15-10 0-17 4-17 10 0 8 10 11 30 16 28 7 45 19 45 45 0 28-23 48-57 48-27 0-48-11-61-31l25-19c9 14 21 21 38 21 14 0 22-6 22-15 0-8-9-12-30-17-27-6-39-19-39-49Z" fill="url(#g)"/>
+  <circle cx="71" cy="71" r="8" fill="#38f2d0"/>
+  <circle cx="185" cy="185" r="8" fill="#78a8ff"/>
+  <path d="M71 71h32M153 185h32" stroke="url(#g)" stroke-width="8" stroke-linecap="round"/>
+</svg>

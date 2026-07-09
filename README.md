@@ -1,6 +1,6 @@
 # sentinelitad.com
 
-Public website repository for **Sentinel IT Asset Disposal** — Growth Web Development LLC's secure IT asset recovery / ITAD lead-generation site for Meridian, Boise, Nampa, Eagle, and the Treasure Valley.
+Public website repository for **Sentinel IT Asset Disposal and Logistics** — Growth Web Development LLC's secure IT asset disposal, logistics, recovery, and ITAD lead-generation site for Meridian, Boise, Nampa, Eagle, and the Treasure Valley.
 
 ## Purpose
 
@@ -24,6 +24,9 @@ Operational docs, contacts, valuation scripts, and private lead research remain 
 - `docs/intake-questions.md` — lead intake questions for pickup/bin/decommissioning requests.
 - `docs/deployment-dns.md` — deployment and DNS notes.
 - `docs/launch-backlog.md` — public-launch backlog.
+- `docs/partners/certified-recycling-partners.md` — possible certified downstream recycling partners to validate.
+- `docs/operations/secure-itad-workflow.md` — working secure intake/wipe/destruction/disposition workflow and tooling plan.
+- `docs/templates/` — sample printable receipt, asset/media log, certificate/report, and wipe/destruction stickers.
 
 ## Current implementation
 
@@ -39,7 +42,7 @@ public/assets/sentinel_hero.jpg
 
 ## Deployment target
 
-Recommended first deployment: Cloudflare Pages or GitHub Pages pointed at `public/`.
+Primary deployment target: Cloudflare Pages pointed at `public/`. GitHub Pages remains a working preview/fallback until Cloudflare DNS is live.
 
 Domain target: `sentinelitad.com`.
 
@@ -49,6 +52,6 @@ Do **not** claim Sentinel is R2v3, NAID, fully insured, or certified for data de
 
 Current safe positioning:
 
-> Secure local IT asset recovery with tracked intake, responsible handling of data-bearing media, value recovery where practical, and certified downstream partner routing when required.
+> Secure local IT asset disposal and logistics with tracked intake, responsible handling of data-bearing media, value recovery where practical, and certified downstream partner routing when required.
 
 Boring wording. Fewer lawsuits.

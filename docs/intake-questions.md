@@ -4,7 +4,7 @@ Use these to turn the first site from “credible placeholder” into a serious 
 
 ## Identity
 
-1. Public business name: Sentinel IT Asset Disposal, Sentinel ITAD, or Sentinel IT Asset Logistics?
+1. Public business name: Sentinel IT Asset Disposal and Logistics. Confirmed 2026-07-09.
 2. Should the public site show only “Meridian, Idaho” or a mailing/business address?
 3. Keep `808-498-1125` public, or get a local Idaho number?
 4. Which Sentinel-domain email should be public first: `michael@`, `pickup@`, `secure@`, or something else?

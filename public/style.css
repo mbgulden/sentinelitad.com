@@ -39,6 +39,7 @@ a { color: inherit; }
 }
 .brand, nav, .actions, .contact-methods { display: flex; align-items: center; gap: 1rem; }
 .brand { text-decoration: none; font-weight: 800; letter-spacing: -.02em; }
+.brand-logo { width: 2rem; height: 2rem; display: block; filter: drop-shadow(0 0 14px rgba(56,242,208,.22)); }
 .mark { width: 2rem; height: 2rem; border: 2px solid var(--teal); border-radius: .45rem; box-shadow: 0 0 24px rgba(56,242,208,.25); position: relative; }
 .mark::after { content: ""; position: absolute; inset: .55rem; border-radius: 50%; background: var(--teal); }
 nav a, .nav-cta { color: var(--muted); text-decoration: none; font-weight: 600; font-size: .95rem; }

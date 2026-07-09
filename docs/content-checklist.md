@@ -6,26 +6,26 @@ For the current gathered facts, safe/unsafe copy rules, audience map, and source
 
 ## Identity
 
-- [ ] Final business name display: Sentinel IT Asset Disposal / Sentinel ITAD / Sentinel IT Asset Logistics.
+- [x] Final business name display: Sentinel IT Asset Disposal and Logistics.
 - [ ] Confirm DBA registration wording.
 - [ ] Confirm public address policy: city-only, service-area-only, or mailing address.
-- [ ] Create Sentinel-domain email addresses.
+- [x] Use `team@sentinelitad.com` as the public Sentinel-domain email address.
 - [ ] Decide whether to keep 808-498-1125 public or add an Idaho/local number.
-- [ ] Logo files: SVG, PNG, favicon, social card.
+- [x] Placeholder SVG logo in `public/assets/logo.svg`; still needs final brand review, PNG/favicon/social card exports.
 
 ## Proof and trust
 
-- [ ] General liability / cyber / E&O insurance status and approved website wording.
+- [x] Insurance status: insured; certificates and additional insured documents available. Still need exact approved public coverage wording if naming policy types/limits.
 - [ ] Downstream recycler partner names, certifications, certificate copies, and allowed public wording.
-- [ ] Sample chain-of-custody receipt.
-- [ ] Sample asset/media intake log.
-- [ ] Sample Certificate of Sanitization / Disposition after wipe tooling is actually working.
+- [x] Sample printable pickup / chain-of-custody receipt in `docs/templates/printable-pickup-receipt.html`.
+- [x] Sample asset/media intake log in `docs/templates/sample-asset-media-log.csv`.
+- [x] Draft sample Certificate of Disposition/Sanitization report template in `docs/templates/sample-certificate-of-disposition.html`; do not use for client jobs until tooling/evidence are real.
 - [ ] Photos of labeled bins, vehicle/trailer, intake area, hardware sorting area, and representative equipment.
 - [ ] Short founder/operator note from Michael: why Sentinel exists and why security matters.
 
 ## Lead generation
 
-- [ ] Confirm form backend: FormSubmit vs Cloudflare Worker vs CRM.
+- [ ] Confirm final form backend: Cloudflare Worker/Turnstile preferred; FormSubmit is temporary.
 - [ ] Add spam protection if using a public form.
 - [ ] Decide lead routing SLA and autoresponder copy.
 - [ ] Create dedicated landing pages for MSPs, law firms, medical offices, and engineering/AI shops.
