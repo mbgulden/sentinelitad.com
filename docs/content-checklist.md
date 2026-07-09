@@ -25,6 +25,9 @@ For the current gathered facts, safe/unsafe copy rules, audience map, and source
 
 ## Lead generation
 
+- [x] MSP feeder-bin landing page: `public/msp-feeder-bin.html`.
+- [x] Pickup process / trust-documentation page: `public/how-pickup-works.html`.
+
 - [ ] Confirm final form backend: Cloudflare Worker/Turnstile preferred; FormSubmit is temporary.
 - [ ] Add spam protection if using a public form.
 - [ ] Decide lead routing SLA and autoresponder copy.

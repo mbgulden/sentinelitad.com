@@ -16,11 +16,11 @@
 - [x] Add certificate sample with fake/test serials only: `docs/templates/sample-certificate-of-disposition.html`.
 - [x] Add internal downstream partner candidate list; public partner wording still needs validation/approval.
 - [ ] Add founder note and local photos.
-- [ ] Add case-study style “what a pickup record includes” example.
+- [x] Add “How pickup works” trust page with receipt/log/certificate explanation: `public/how-pickup-works.html`.
 
 ## Lead-gen upgrades
 
-- [ ] MSP landing page with feeder-bin offer.
+- [x] MSP landing page with feeder-bin offer: `public/msp-feeder-bin.html`.
 - [ ] Office cleanout landing page.
 - [ ] Compliance-heavy office landing page.
 - [ ] Downloadable MSP one-pager.
