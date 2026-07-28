@@ -1,0 +1,42 @@
+name: Deploy Sentinel site
+
+'on':
+  push:
+    branches:
+      - ned/initial-website
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Install wrangler
+        run: npm install -g wrangler
+
+      - name: Deploy to Cloudflare Pages
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: 196c1798da487413b0281ccc570f05a1
+        run: |
+          wrangler pages deploy dist \
+            --project-name=sentinelitad-com \
+            --branch=ned/initial-website \
+            --commit-hash="$GITHUB_SHA" \
+            --commit-message="${{ github.event.head_commit.message }}"
