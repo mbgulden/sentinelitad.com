@@ -178,12 +178,21 @@ jobs:
 
 | Check | Result |
 |---|---|
-| Live site HTTP status | **200** |
-| Live site size | 13,526 bytes (includes Founder Note) |
-| Founder Note present | Yes (2 text markers, 3 CSS classes) |
-| CSS updated | 8,297 bytes (5 new selectors) |
-| Cache purged after rollbacks | Yes — `sentinelitad.com` and `www.sentinelitad.com` both return 200 |
-| All 15 dist files uploaded via wrangler | Yes — confirmed via Pages API |
+| `npm run build` (local) | **PASS** — 3 pages, 1.59s |
+| `verify-theme.py` (local) | **PASS** |
+| `wrangler pages deploy dist --project-name=sentinelitad-com` (local CLI) | **PASS** — uploaded 5 files, deployed to `https://9fe11804.sentinelitad-com.pages.dev` |
+| Live site `https://sentinelitad.com/` HTTP status | **200** |
+| Live site HTML size | **13,526 bytes** (was 11,176 before Founder Note) |
+| Founder Note text markers | **2 matches** ("Michael Gulden" / "13-year IT professional" / "Government liquidation auctions") |
+| Founder Note CSS classes | **3 matches** |
+| Contact form intact | **2 matches** (FormSubmit action + Send request button) |
+| 808-498-1125 phone references | **4 matches** |
+| Live CSS size | **8,297 bytes** (was 7,461) |
+| New CSS selectors | **5 matches** (`founder-grid` / `pickup-list`) |
+| GitHub Action "Deploy Sentinel site" fires on push | **PASS** — triggered automatically on commits `7e278f8` and `4ba0645` |
+| GitHub Action wrangler deploy step | **BLOCKED on operator secret** — needs `CLOUDFLARE_API_TOKEN` GitHub Actions secret (see Step 1) |
+
+The pipeline is fully wired. **Adding the GitHub Actions secret is the one operator action that completes the durability loop.**
 
 ## Pitfalls learned (and how this setup avoids them)
 
@@ -194,6 +203,9 @@ jobs:
 5. **Custom domain URL goes through Cloudflare proxy.** The `.pages.dev` URL is the canonical target; `sentinelitad.com` is an alias. They have separate cache layers; either can be stuck while the other is fine.
 6. **`pages.dev` URL works while custom domain 500s = edge cache problem.** Purge fixes it. Don't try to redeploy.
 7. **The `CLOUDFLARE_PAGES_API_TOKEN` "Edit Cloudflare Workers" scope works for Pages too.** The token name is misleading; the scope is broad enough.
+8. **Astro 6.x requires Node >=22.12.0.** Pinning Node 20 in the workflow causes the build step to fail with "Node.js v20.20.2 is not supported by Astro!" — wasted a deploy cycle on this.
+9. **GitHub Actions log download returns a zip that's 112 bytes for ~30 seconds after a run completes.** Wait 30-60s before pulling logs.
+10. **GitHub Actions secrets cannot be set via the API with a workflow-scoped token.** Adding `CLOUDFLARE_API_TOKEN` is an operator action in the GitHub UI — no workaround, must be done by hand.
 
 ## Related files
 
