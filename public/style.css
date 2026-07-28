@@ -113,3 +113,15 @@ footer a { color: var(--teal); font-weight: 700; }
   .actions, .hero-bullets { flex-direction: column; grid-template-columns: 1fr; align-items: stretch; }
   .grid, .timeline, .proof-list { grid-template-columns: 1fr; }
 }
+
+/* === Founder Note section (added 2026-07-27) === */
+.founder-grid { display: grid; grid-template-columns: 1.4fr .9fr; gap: 2.5rem; align-items: start; }
+.founder-bio p.lede { font-size: 1.18rem; font-weight: 500; }
+.founder-bio p { margin-bottom: 1rem; }
+.founder-meta { background: var(--surface, #f6f7f8); border: 1px solid var(--border, #e5e7ea); border-radius: .9rem; padding: 1.4rem 1.5rem; }
+.founder-meta h3 { margin: 0 0 .6rem 0; font-size: 1rem; letter-spacing: .02em; }
+.founder-meta h3:not(:first-child) { margin-top: 1.3rem; }
+.pickup-list { list-style: none; padding: 0; margin: 0; }
+.pickup-list li { padding: .35rem 0; border-bottom: 1px dashed var(--border, #e5e7ea); font-size: .95rem; }
+.pickup-list li:last-child { border-bottom: none; }
+@media (max-width: 720px) { .founder-grid { grid-template-columns: 1fr; } }
