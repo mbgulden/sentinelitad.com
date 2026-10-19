@@ -27,9 +27,10 @@ For the current gathered facts, safe/unsafe copy rules, audience map, and source
 
 - [x] MSP feeder-bin landing page: `public/msp-feeder-bin.html`.
 - [x] Pickup process / trust-documentation page: `public/how-pickup-works.html`.
+- [x] Dedicated pickup request intake form page: `public/request-pickup.html` (FormSubmit, honeypot field).
 
 - [ ] Confirm final form backend: Cloudflare Worker/Turnstile preferred; FormSubmit is temporary.
-- [ ] Add spam protection if using a public form.
+- [x] Add spam protection if using a public form (hidden honeypot field in `public/request-pickup.html`; homepage form still pending).
 - [ ] Decide lead routing SLA and autoresponder copy.
 - [ ] Create dedicated landing pages for MSPs, law firms, medical offices, and engineering/AI shops.
 - [ ] Add downloadable one-page PDF/flyer for MSP feeder-bin outreach.

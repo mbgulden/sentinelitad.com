@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Request a Pickup | Sentinel ITAD</title>
+  <meta name="description" content="List your equipment and request a secure IT asset pickup in Meridian, Boise, Nampa, Eagle, and the Treasure Valley.">
+  <link rel="canonical" href="https://sentinelitad.com/request-pickup.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Geist+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .form-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: .9rem; }
+    .equip-row { display: grid; grid-template-columns: 1.6fr 1fr auto; gap: .5rem; margin-bottom: .5rem; }
+    .equip-row select, .equip-row input { padding: .85rem; }
+    .equip-remove {
+      border: 1px solid var(--line); background: var(--surface-2); color: var(--muted);
+      border-radius: .55rem; padding: 0 .85rem; font-weight: 800; cursor: pointer; font: inherit; font-size: 1.05rem;
+    }
+    .equip-remove:hover { color: var(--ink); border-color: var(--teal); }
+    .add-equip { justify-self: start; }
+    .form-hint { color: var(--muted); font-size: .85rem; margin: 0; }
+    /* Honeypot: visually hidden, never labeled. Bots fill it, humans don't see it.
+       FormSubmit silently drops any submission that has a value in _honey. */
+    .hp-field { position: absolute !important; left: -9999px !important; width: 1px; height: 1px; overflow: hidden; }
+    .hp-field input { display: none; }
+    @media (max-width: 560px) {
+      .form-grid-2 { grid-template-columns: 1fr; }
+      .equip-row { grid-template-columns: 1fr 1fr; }
+      .equip-remove { grid-column: 1 / -1; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Sentinel ITAD home"><img class="brand-logo" src="assets/logo.svg" alt="" width="32" height="32"><span>Sentinel ITAD</span></a>
+    <nav aria-label="Primary navigation">
+      <a href="/#services">Services</a>
+      <a href="msp-feeder-bin.html">MSP bins</a>
+      <a href="how-pickup-works.html">Pickup process</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+    <a class="nav-cta" href="request-pickup.html">Request pickup</a>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Request a pickup</p>
+        <h1>List the gear. We’ll take it off your hands.</h1>
+        <p class="lede">Tell us what’s in the room, where it is, and when it can go. Rough counts are fine — we scope the rest during pickup. Data-bearing media is separated and routed per the agreed disposition path.</p>
+        <div class="actions">
+          <a class="button primary" href="#pickup-form">Fill out the form</a>
+          <a class="button secondary" href="how-pickup-works.html">See the pickup process</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="pickup-form">
+      <div class="contact-copy">
+        <p class="eyebrow">Intake form</p>
+        <h2>Tell us what needs to disappear responsibly.</h2>
+        <p>List each type of equipment with a rough quantity. If drives are present, say so — that changes how we stage the job.</p>
+        <div class="contact-methods">
+          <a href="tel:+180****1125">808-498-1125</a>
+          <a href="mailto:team@sentinelitad.com?subject=Sentinel%20ITAD%20pickup%20request">team@sentinelitad.com</a>
+        </div>
+      </div>
+      <form class="lead-form" action="https://formsubmit.co/team@sentinelitad.com" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_subject" value="Sentinel ITAD pickup + quote request">
+        <input type="hidden" name="_template" value="box">
+        <input type="hidden" name="_next" value="https://sentinelitad.com/thanks.html">
+        <!-- Honeypot: hidden from humans, filled by bots. Any value here = silently dropped. -->
+        <p class="hp-field" aria-hidden="true">
+          <label>Leave this field empty<input type="text" name="_honey" tabindex="-1" autocomplete="off"></label>
+        </p>
+
+        <div class="form-grid-2">
+          <label>Name<input name="name" required autocomplete="name"></label>
+          <label>Company<input name="company" required autocomplete="organization"></label>
+        </div>
+        <div class="form-grid-2">
+          <label>Phone<input name="phone" type="tel" required autocomplete="tel"></label>
+          <label>Email<input name="email" type="email" required autocomplete="email"></label>
+        </div>
+        <label>Pickup address<input name="pickup_address" required autocomplete="street-address" placeholder="Street, city, state — loading dock or stairwell notes welcome"></label>
+
+        <div>
+          <label>Equipment list
+            <div class="equip-group">
+              <div class="equip-row">
+                <select name="equipment_type_1" id="equip-type-1" required>
+                  <option value="" disabled selected>Select equipment type</option>
+                  <option>Desktops</option>
+                  <option>Laptops</option>
+                  <option>Thin clients / zero clients</option>
+                  <option>Towers / workstations</option>
+                  <option>Rack servers</option>
+                  <option>NAS / SAN / storage</option>
+                  <option>Switches</option>
+                  <option>Routers</option>
+                  <option>Firewalls</option>
+                  <option>Access points / Wi-Fi gear</option>
+                  <option>Monitors</option>
+                  <option>Printers / MFPs</option>
+                  <option>UPS / battery packs</option>
+                  <option>HDDs / SSDs (loose)</option>
+                  <option>Tapes / media (boxed, labeled)</option>
+                  <option>Networking cables / optics</option>
+                  <option>Office equipment (other)</option>
+                  <option>Mixed / unsure</option>
+                </select>
+                <input name="equipment_qty_1" type="number" min="1" inputmode="numeric" placeholder="Qty" aria-label="Quantity for row 1" required>
+                <button class="equip-remove" type="button" aria-label="Remove equipment row">&times;</button>
+              </div>
+            </div>
+            <button class="button secondary add-equip" type="button" id="add-equip">+ Add equipment type</button>
+            <p class="form-hint">Rough quantities are fine. Separate data-bearing media from general equipment where you can.</p>
+          </label>
+        </div>
+
+        <label>Preferred pickup date<input name="pickup_date" type="date" required></label>
+        <label>Notes<textarea name="notes" rows="4" placeholder="Example: 12 desktops, 2 rack servers, ~30 drives in a locked cabinet, Boise office, ground floor with dock access. Need a pickup receipt and asset log."></textarea></label>
+        <button class="button primary" type="submit">Send pickup request</button>
+      </form>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <p class="eyebrow">What happens next</p>
+        <h2>Rough counts in, documented handoff out.</h2>
+      </div>
+      <ol class="timeline">
+        <li><strong>We review</strong><p>Your equipment list and pickup address. If storage media is present, we confirm the disposition path before the truck rolls.</p></li>
+        <li><strong>We schedule</strong><p>Direct follow-up to confirm the date, access details, and any documentation you need — receipt, asset/media log, or downstream paperwork.</p></li>
+        <li><strong>We pick up</strong><p>Documented handoff: custody notes, photos where useful, exception notes for anything that doesn’t fit the agreed scope.</p></li>
+      </ol>
+    </section>
+  </main>
+  <footer>
+    <p>© 2026 Sentinel IT Asset Disposal and Logistics · Growth Web Development LLC · Meridian, Idaho</p>
+    <p><a href="terms.html">Terms</a> · <a href="privacy.html">Privacy</a> · <a href="mailto:team@sentinelitad.com">team@sentinelitad.com</a> · <a href="tel:+180****1125">808-498-1125</a></p>
+  </footer>
+
+  <script>
+    (function () {
+      var tpl = document.querySelector(".equip-group .equip-row");
+      var group = document.querySelector(".equip-group");
+      var addBtn = document.getElementById("add-equip");
+      var max = 10;
+
+      function rowIndex(row) {
+        return Array.prototype.indexOf.call(group.querySelectorAll(".equip-row"), row) + 1;
+      }
+
+      function removeRow(row) {
+        var rows = group.querySelectorAll(".equip-row");
+        if (rows.length <= 1) {
+          // Keep at least one row; clear it instead of removing.
+          row.querySelector("select").selectedIndex = 0;
+          row.querySelector("input").value = "";
+          return;
+        }
+        row.remove();
+      }
+
+      addBtn.addEventListener("click", function () {
+        if (group.querySelectorAll(".equip-row").length >= max) return;
+        var clone = tpl.cloneNode(true);
+        clone.querySelector("select").selectedIndex = 0;
+        clone.querySelector("input").value = "";
+        group.appendChild(clone);
+        clone.querySelector("select").focus();
+      });
+
+      group.addEventListener("click", function (e) {
+        var btn = e.target.closest(".equip-remove");
+        if (!btn) return;
+        removeRow(btn.closest(".equip-row"));
+      });
+
+      // On submit, drop any equipment rows left blank (bot or partial input).
+      document.querySelector("form").addEventListener("submit", function (e) {
+        group.querySelectorAll(".equip-row").forEach(function (row) {
+          var i = rowIndex(row);
+          if (!row.querySelector("select").value && !row.querySelector("input").value) {
+            row.querySelector("select").removeAttribute("required");
+            [row.querySelector("select"), row.querySelector("input")].forEach(function (el) { el.disabled = true; });
+          } else {
+            row.querySelector("select").setAttribute("required", "");
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

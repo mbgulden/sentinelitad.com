@@ -58,7 +58,7 @@ require(".dark { background:" in css, "dark background must remain scoped to .da
 require("color-scheme: light;" in theme_css, "Astro theme CSS must keep light color-scheme")
 require("dark backgrounds only inside scoped modules" in tokens or "Dark backgrounds only inside scoped modules" in tokens, "tokens must document dark scope rule")
 
-for rel in ["public/index.html", "public/msp-feeder-bin.html", "public/how-pickup-works.html", "public/privacy.html", "public/terms.html", "public/thanks.html"]:
+for rel in ["public/index.html", "public/msp-feeder-bin.html", "public/how-pickup-works.html", "public/request-pickup.html", "public/privacy.html", "public/terms.html", "public/thanks.html"]:
     try:
         HTMLParser().feed(text(rel))
     except Exception as exc:  # pragma: no cover - direct script

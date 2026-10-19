@@ -21,6 +21,7 @@
 ## Lead-gen upgrades
 
 - [x] MSP landing page with feeder-bin offer: `public/msp-feeder-bin.html`.
+- [x] Dedicated pickup request intake form: `public/request-pickup.html` (own page, FormSubmit, hidden honeypot).
 - [ ] Office cleanout landing page.
 - [ ] Compliance-heavy office landing page.
 - [ ] Downloadable MSP one-pager.
