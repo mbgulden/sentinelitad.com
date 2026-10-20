@@ -146,3 +146,10 @@ footer a { color: var(--brand); font-weight: 700; }
 .pickup-list li { padding: .35rem 0; border-bottom: 1px dashed var(--line); font-size: .95rem; }
 .pickup-list li:last-child { border-bottom: none; }
 @media (max-width: 720px) { .founder-grid { grid-template-columns: 1fr; } }
+
+/* === FAQ page (added 2026-10-20) === */
+.faq-list { display: grid; gap: 1rem; max-width: 860px; }
+.faq-item { background: var(--surface); border: 1px solid var(--line); border-radius: .9rem; padding: 1.4rem 1.5rem; box-shadow: 0 12px 34px rgba(7,26,43,.06); border-top: 3px solid var(--accent); }
+.faq-item h3 { font-size: 1.35rem; letter-spacing: -.01em; margin-bottom: .75rem; }
+.faq-item p { margin: 0; }
+@media (max-width: 720px) { .faq-item { padding: 1.2rem; } }

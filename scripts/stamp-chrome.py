@@ -48,32 +48,35 @@ FOOTER_OPEN = "<!-- CHROME:FOOTER -->"
 FOOTER_CLOSE = "<!-- /CHROME:FOOTER -->"
 
 # Nav item variants. hrefs are root-relative so one template serves every page.
-NAV_FULL5 = [
+NAV_FULL6 = [
     ("/#services", "Services"),
     ("msp-feeder-bin.html", "MSP bins"),
     ("how-pickup-works.html", "Pickup process"),
     ("we-buy-used-it-equipment.html", "We buy gear"),
+    ("faq.html", "FAQ"),
     ("/#contact", "Contact"),
 ]
-NAV_SLIM4 = [
+NAV_SLIM5 = [
     ("/#services", "Services"),
     ("msp-feeder-bin.html", "MSP bins"),
     ("how-pickup-works.html", "Pickup process"),
+    ("faq.html", "FAQ"),
     ("/#contact", "Contact"),
 ]
 
 # Per-page chrome config. `active` is the nav href of the current page (or None).
 # `footer: False` preserves pages that intentionally have no footer.
 PAGES = {
-    "index.html":                    {"brand": "/", "nav": NAV_FULL5, "cta": "/#contact", "cta_text": "Request pickup", "active": None},
-    "how-pickup-works.html":         {"brand": "/", "nav": NAV_SLIM4, "cta": "/#contact", "cta_text": "Request pickup", "active": "how-pickup-works.html"},
-    "msp-feeder-bin.html":           {"brand": "/", "nav": NAV_SLIM4, "cta": "/#contact", "cta_text": "Request pickup", "active": "msp-feeder-bin.html"},
-    "we-buy-used-it-equipment.html": {"brand": "/", "nav": NAV_FULL5, "cta": "#sell",     "cta_text": "Get an offer",   "active": "we-buy-used-it-equipment.html"},
-    "we-buy-server-ram.html":        {"brand": "/", "nav": NAV_FULL5, "cta": "#sell",     "cta_text": "Get an offer",   "active": None},
-    "we-buy-retired-it-assets.html": {"brand": "/", "nav": NAV_FULL5, "cta": "#sell",     "cta_text": "Get an offer",   "active": None},
+    "index.html":                    {"brand": "/", "nav": NAV_FULL6, "cta": "/#contact", "cta_text": "Request pickup", "active": None},
+    "how-pickup-works.html":         {"brand": "/", "nav": NAV_SLIM5, "cta": "/#contact", "cta_text": "Request pickup", "active": "how-pickup-works.html"},
+    "msp-feeder-bin.html":           {"brand": "/", "nav": NAV_SLIM5, "cta": "/#contact", "cta_text": "Request pickup", "active": "msp-feeder-bin.html"},
+    "we-buy-used-it-equipment.html": {"brand": "/", "nav": NAV_FULL6, "cta": "#sell",     "cta_text": "Get an offer",   "active": "we-buy-used-it-equipment.html"},
+    "we-buy-server-ram.html":        {"brand": "/", "nav": NAV_FULL6, "cta": "#sell",     "cta_text": "Get an offer",   "active": None},
+    "we-buy-retired-it-assets.html": {"brand": "/", "nav": NAV_FULL6, "cta": "#sell",     "cta_text": "Get an offer",   "active": None},
+    "faq.html":                      {"brand": "/", "nav": NAV_SLIM5, "cta": "/#contact", "cta_text": "Request pickup", "active": "faq.html"},
     "privacy.html":                  {"brand": "/", "nav": None,      "cta": "/#contact", "cta_text": "Request pickup", "active": None, "footer": False},
     "terms.html":                    {"brand": "/", "nav": None,      "cta": "/#contact", "cta_text": "Request pickup", "active": None, "footer": False},
-    "thanks.html":                   {"brand": "/", "nav": NAV_FULL5, "cta": "/#contact", "cta_text": "Request pickup", "active": None},
+    "thanks.html":                   {"brand": "/", "nav": NAV_FULL6, "cta": "/#contact", "cta_text": "Request pickup", "active": None},
 }
 
 
