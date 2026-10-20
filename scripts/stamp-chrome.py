@@ -73,7 +73,7 @@ PAGES = {
     "we-buy-used-it-equipment.html": {"brand": "/", "nav": NAV_FULL6, "cta": "#sell",     "cta_text": "Get an offer",   "active": "we-buy-used-it-equipment.html"},
     "we-buy-server-ram.html":        {"brand": "/", "nav": NAV_FULL6, "cta": "#sell",     "cta_text": "Get an offer",   "active": None},
     "we-buy-retired-it-assets.html": {"brand": "/", "nav": NAV_FULL6, "cta": "#sell",     "cta_text": "Get an offer",   "active": None},
-    "faq.html":                      {"brand": "/", "nav": NAV_SLIM5, "cta": "/#contact", "cta_text": "Request pickup", "active": "faq.html"},
+    "faq.html":                      {"brand": "/", "nav": NAV_FULL6, "cta": "/#contact", "cta_text": "Request pickup", "active": "faq.html"},
     "privacy.html":                  {"brand": "/", "nav": None,      "cta": "/#contact", "cta_text": "Request pickup", "active": None, "footer": False},
     "terms.html":                    {"brand": "/", "nav": None,      "cta": "/#contact", "cta_text": "Request pickup", "active": None, "footer": False},
     "thanks.html":                   {"brand": "/", "nav": NAV_FULL6, "cta": "/#contact", "cta_text": "Request pickup", "active": None},
