@@ -53,12 +53,12 @@ tokens = text("src/theme/tokens.ts")
 
 require("color-scheme: light;" in css, "public CSS must keep light color-scheme")
 require("color-scheme: dark;" not in css, "public CSS must not set global dark color-scheme")
-require("--bg: #f7f8fb" in css, "public CSS must keep light page bg token")
+require("--bg: #F7FAFB" in css, "public CSS must keep light page bg token")
 require(".dark { background:" in css, "dark background must remain scoped to .dark")
 require("color-scheme: light;" in theme_css, "Astro theme CSS must keep light color-scheme")
-require("dark backgrounds only inside scoped modules" in tokens or "Dark backgrounds only inside scoped modules" in tokens, "tokens must document dark scope rule")
+require("dark navy backgrounds only inside scoped modules" in tokens or "Dark navy backgrounds only inside scoped modules" in tokens, "tokens must document dark scope rule")
 
-for rel in ["public/index.html", "public/msp-feeder-bin.html", "public/how-pickup-works.html", "public/request-pickup.html", "public/privacy.html", "public/terms.html", "public/thanks.html"]:
+for rel in ["public/index.html", "public/msp-feeder-bin.html", "public/how-pickup-works.html", "public/request-pickup.html", "public/privacy.html", "public/terms.html", "public/thanks.html", "public/404.html"]:
     try:
         HTMLParser().feed(text(rel))
     except Exception as exc:  # pragma: no cover - direct script
