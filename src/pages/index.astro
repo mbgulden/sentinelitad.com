@@ -3,3 +3,20 @@ import PageFromContent from "../components/PageFromContent.astro";
 import page from "../content/pages/home.json";
 ---
 <PageFromContent page={page} />
+
+<astro:head>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Sentinel ITAD",
+  "legalName": "Sentinel IT Asset Disposal and Logistics",
+  "url": "https://sentinelitad.com/",
+  "email": "team@sentinelitad.com",
+  "telephone": "+1-808-498-1125",
+  "address": {"@type":"PostalAddress","addressLocality":"Meridian","addressRegion":"Idaho"},
+  "areaServed": ["Meridian, Idaho","Boise, Idaho","Nampa, Idaho","Eagle, Idaho"],
+  "founder": "Michael Gulden"
+}
+</script>
+</astro:head>
