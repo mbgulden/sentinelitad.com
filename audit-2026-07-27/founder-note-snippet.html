@@ -1,0 +1,103 @@
+<!--
+  Founder Note + Recent Work Section
+  Insert above the existing <section id="contact" class="section contact"> block
+  in public/index.html (and optionally in public/how-pickup-works.html and
+  public/msp-feeder-bin.html for cross-page consistency).
+
+  Style: matches existing .section / .eyebrow / .split classes in public/style.css.
+  No new CSS required.
+
+  Bio source (Michael, 2026-07-27):
+    "I've been in the tech industry since 2013 and have always been interested
+     in reusing/repurposing old tech and responsibly refurbishing or disposing
+     of computers and lithium batteries. I've participated in government
+     liquidation auctions and help give old hardware a second life in the
+     local market here in Meridian Idaho."
+-->
+<section class="section founder-note">
+  <div class="section-head">
+    <p class="eyebrow">Who's behind Sentinel</p>
+    <h2>Owner-operator, not a call center.</h2>
+  </div>
+
+  <div class="founder-grid">
+    <div class="founder-bio">
+      <p class="lede">
+        Sentinel is run by Michael Gulden, a 13-year IT professional with a long
+        interest in reusing and repurposing retired hardware and in safely
+        refurbishing or disposing of computers and lithium batteries. Based in
+        Meridian, Idaho, the business focuses on secure, accountable pickup and
+        disposition for organizations that cannot afford loose ends with their
+        retired hardware.
+      </p>
+      <p>
+        Past work has included participation in government liquidation auctions
+        and helping give retired hardware a second life in the local Meridian
+        market. The operating model is relationship-based: most jobs come from
+        repeat clients and referrals, because the goal is predictable pickup and
+        documented disposition — not volume.
+      </p>
+      <p>
+        For data-bearing media, Sentinel separates, accounts for, and routes
+        each drive or device intentionally. Sanitization tooling and
+        certificate automation are being formalized; until that work is
+        complete, public copy stays conservative and Sentinel does not
+        advertise certified destruction.
+      </p>
+    </div>
+
+    <aside class="founder-meta">
+      <h3>Recent work and pickup areas</h3>
+      <ul class="pickup-list">
+        <li>Government liquidation auctions — sourcing retired enterprise hardware before it hits overcompetitive public markets</li>
+        <li>Local Meridian market — helping retired hardware find a second life with hobbyists, homelab builders, and small offices</li>
+        <li>Long-distance pickup — confirmed case-by-case when auction economics justify travel (e.g. previous pickups in Laredo, TX and Nebraska)</li>
+      </ul>
+
+      <h3>Coverage</h3>
+      <ul class="pickup-list">
+        <li>Treasure Valley (Meridian, Boise, Nampa, Eagle) — primary service area</li>
+        <li>Hawaii — pickup coordination for established contacts</li>
+        <li>Long-distance — discussed case-by-case; travel confirmed when economics justify</li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<!--
+  Minimal CSS additions to public/style.css (append at end of file).
+  Only adds three rules; no conflict with existing styles.
+-->
+<style>
+.founder-grid { display: grid; grid-template-columns: 1.4fr .9fr; gap: 2.5rem; align-items: start; }
+.founder-bio p.lede { font-size: 1.18rem; font-weight: 500; }
+.founder-bio p { margin-bottom: 1rem; }
+.founder-meta { background: var(--surface, #f6f7f8); border: 1px solid var(--border, #e5e7ea); border-radius: .9rem; padding: 1.4rem 1.5rem; }
+.founder-meta h3 { margin: 0 0 .6rem 0; font-size: 1rem; letter-spacing: .02em; }
+.founder-meta h3:not(:first-child) { margin-top: 1.3rem; }
+.pickup-list { list-style: none; padding: 0; margin: 0; }
+.pickup-list li { padding: .35rem 0; border-bottom: 1px dashed var(--border, #e5e7ea); font-size: .95rem; }
+.pickup-list li:last-child { border-bottom: none; }
+@media (max-width: 720px) { .founder-grid { grid-template-columns: 1fr; } }
+</style>
+
+<!--
+  INSERTION INSTRUCTIONS
+  ----------------------
+  1. Place the <section> block immediately before:
+       <section id="contact" class="section contact">
+     in public/index.html. (Same insertion point applies to msp-feeder-bin.html and how-pickup-works.html if desired.)
+  2. Append the <style> block at the bottom of public/style.css, OR inline it just before the </body> of index.html.
+  3. Test locally:
+       python3 -m http.server 8000 --directory public
+     then open http://localhost:8000/ in a browser.
+  4. Commit on a feature branch:
+       git checkout -b feature/founder-note
+       git add public/index.html public/style.css
+       git commit -m "[Fred] Add Founder Note section above contact form (#audit-2026-07-27)"
+       git push origin feature/founder-note
+  5. Cloudflare Pages will auto-deploy from the production branch. Verify at https://sentinelitad.com/.
+  6. If anything looks wrong, revert:
+       git revert HEAD
+       git push origin feature/founder-note
+-->
