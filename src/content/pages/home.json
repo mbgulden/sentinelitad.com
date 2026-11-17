@@ -5,7 +5,7 @@
   "navLabel": "Home",
   "hero": {
     "eyebrow": "Meridian, Idaho · Serving the Treasure Valley",
-    "title": "Secure IT asset disposal and logistics for teams that cannot afford loose ends.",
+    "title": "Secure IT asset disposal and logistics for teams that need every loose end tied up.",
     "body": "Sentinel helps MSPs, offices, and compliance-conscious businesses clear retired servers, workstations, networking gear, and storage media with local pickup, documented intake, value recovery, and responsible downstream recycling.",
     "image": "/assets/sentinel_hero.jpg",
     "imageAlt": "Secure IT asset recovery console beside enterprise server equipment",
@@ -23,7 +23,7 @@
     ]
   },
   "warning": {
-    "strong": "No magic certificates.",
+    "strong": "Real documentation.",
     "body": "We document what actually happened: pickup, intake, serial/media handling, sanitization or downstream routing, and exceptions. Trust signals beat theater."
   },
   "cards": [
@@ -55,12 +55,12 @@
       "body": "Pickup records, ticket IDs, serial/media notes, and disposition records where the job requires them."
     },
     {
-      "title": "Honest compliance posture",
+      "title": "Documented compliance",
       "body": "Insured — general liability coverage in place. Pickup receipts and documented custody provided on every job. Data destruction documented on every job with a wipe/destruction certificate."
     },
     {
       "title": "Security-first language",
-      "body": "The core offer is liability reduction and responsible disposition, not junk hauling."
+      "body": "The core offer is liability reduction and responsible disposition, with care for your retired assets."
     }
   ],
   "steps": [
